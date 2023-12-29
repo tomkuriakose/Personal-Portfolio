@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808; /* background color */
+    color: #fff; /* text color */
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/Screen\ Shot\ 2023-12-26\ at\ 11.00.53\ PM.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%; /* space of menu from left side and top */
+}
+nav{
+    display: flex; /* image and links side by side */
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 140px;
+
+}
+nav ul li{
+    display: inline-block; /* horizontaly aligned */
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #fff; /* menu color */
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0; /* menu underlines are hidden*/
+    height: 3px;
+    background: #38b6ff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 30px;
+    margin-top: 20px
+}
+.header-text h1 span{
+    color: #38b6ff;
+}
+/*  BUTTONS */
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.buttons img {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.buttons a:hover img {
+    transform: scale(1.1); /* Add a slight scale effect on hover */
+}
+/* ABOUT SECTION */
+#about{
+    padding: 80px 0; /* Top bottom, left right */
+    color: #fff
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col{
+    flex-basis: 80%;
+}
+.subtitle{
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;  
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #38b6ff;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 90%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    font-size: 18px;
+}
+.tab-contents ul li span.first-span{
+    color: #fff;
+    font-size: 25px;
+}
+.tab-contents ul li span.second-span{
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/* PROJECTS SECTION */
+#portfolio{
+    padding: 50px 0;
+}
+.sub-title{
+    font-size: 50px;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+.layer{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #38b6ff);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #38b6ff;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+}
+/* RESUME SECTION */
+.resume{
+    padding: 50px 0;
+}
+#sub-title{
+    font-size: 50px;
+}
+#resume-preview{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+/* SMALL SCREEN STYLING */
+nav.fa{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/newback.png);
+        margin-bottom: 20px;
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px
+    }
+    nav ul{
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    #about{
+        margin-top: 50%; /* how far the more about me text is from above it */
+    }
+    .copyright{
+        font-size: 14px;
+    }
+
+}
