@@ -217,7 +217,7 @@ nav.fa{
 
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/newback.png);
+        background-image: url(images/diffback.png);
         margin-bottom: 20px;
     }
     .header-text{
